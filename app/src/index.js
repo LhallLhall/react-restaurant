@@ -20,32 +20,54 @@ function PageLoad (){
 
   // stops the code from running until the api has been called and state has received it's data
   if(data.length === 0) {
-    return <div className=''>WAIT A 🤬 SECOND</div>
+    return (
+      <div className='d-flex justify-content-center align-items-center h-100vh' style={{height: '100vh'}}>
+      <h1>WAIT A 🤬 SECOND</h1>
+      </div>
+        )
   }
 return (
   <>
-      <h1>The Garden of Eat'n</h1>
-      <h3>Hours of Operation are 8:00AM to 9:00PM</h3>
-      <h5>348 E Main St, Lexington, KY</h5>
-      <button onClick={() => setPage('Home')}>Home</button>
-      <button onClick={() => setPage('Breakfast')}>Breakfast</button>
-      <button onClick={() => setPage('Lunch')}>Lunch</button>
-      <button onClick={() => setPage('Dinner')}>Dinner</button>
-      <button onClick={() => setPage('Desserts')}>Desserts</button>
-      <button onClick={() => setPage('Appetizers & Sides')}>Appetizers & Sides</button>
+    <div className='container'>
+      <div className=" d-flex row">
+        <h1 className='text-center text-color-alert'>The Garden of Eat'n</h1>
+      </div>
+      <div className="row  bg-secondary justify-content-center d-flex align-items-center">
+        <div className='col-6 col-md-2 col-lg-2  d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg ' style={{minWidth: '130px'}} onClick={() => setPage('Home')}>Home</button>
+        </div>
+        <div className='col-6 col-md-2 d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg 'style={{minWidth: '130px'}} onClick={() => setPage('Breakfast')}>Breakfast</button>
+        </div>
+        <div className='col-6 col-md-2 d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg 'style={{minWidth: '130px'}} onClick={() => setPage('Lunch')}>Lunch</button>
+        </div>
+        <div className='col-6 col-md-2 d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg 'style={{minWidth: '130px'}} onClick={() => setPage('Dinner')}>Dinner</button>
+        </div>
+        <div className='col-6 col-md-2 d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg 'style={{minWidth: '130px'}} onClick={() => setPage('Desserts')}>Desserts</button>
+        </div>
+        <div className='col-6 col-md-2 d-flex justify-content-center'>
+          <button className='btn btn-dark btn-lg 'style={{minWidth: '130px'}} onClick={() => setPage('Appetizer')}>Appetizers</button>
+        </div>
+      </div>
       {page === 'Home' && <App data={data}/> }
-      {page === 'Breakfast' && <Breakfast data={data} />}
+      {page === 'Breakfast' && <Breakfast data={data} page={page} />}
       {page === 'Lunch' && <Lunch data={data}/>}
       {page === 'Dinner' && <Dinner data={data}/>}
       {page === 'Desserts' && <Desserts data={data}/>}
-      {page === 'Appetizers & Sides' && <AppetizersSides data={data}/>}
+      {page === 'Appetizer' && <AppetizersSides data={data}/>}
+    </div>
+      <h5>Hours of Operation are 8:00AM to 9:00PM</h5>
+      <p>348 E Main St, Lexington, KY</p>
   </>
 )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <div className='bg-secondary' >
   <PageLoad />
   </div>
 )
