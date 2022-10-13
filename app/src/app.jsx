@@ -1,6 +1,11 @@
 
 function home(props) {
-    return <h1>HOME</h1>
-
+    return(
+        <div>
+        <h1>HOME</h1>
+        <h1>Welcome to The Garden of Eat'n!</h1>
+        </div>
+        ) 
+        
 }
 export default home

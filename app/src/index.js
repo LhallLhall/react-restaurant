@@ -17,13 +17,15 @@ function PageLoad (){
     Axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
         .then((resp) => setData(resp.data));
   }, [])
+
+  // stops the code from running until the api has been called and state has received it's data
   if(data.length === 0) {
-    return <div>WAIT A 🤬 SECOND</div>
+    return <div className=''>WAIT A 🤬 SECOND</div>
   }
 return (
   <>
       <h1>The Garden of Eat'n</h1>
-      <h3>Hours of Operation are </h3>
+      <h3>Hours of Operation are 8:00AM to 9:00PM</h3>
       <h5>348 E Main St, Lexington, KY</h5>
       <button onClick={() => setPage('Home')}>Home</button>
       <button onClick={() => setPage('Breakfast')}>Breakfast</button>
