@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 
-function LoadHome() {
-    const [page, setPage ] = useState('home')
-    const [data, setData] = useState([])
+function LoadHome(props) {
+    return <div>HOME</div>
+    // const [page, setPage ] = useState('home')
+    // const [name, setName] = useState()
     
-    useEffect(() => {
-        axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
-            .then((resp) => setData(resp.data));
-    }, [])
-    
-    if(data.length === 0) {
-        return null
-    }
+    // // if(data.length === 0) {
+    // //     return null
+    // // }
 
-    console.log(data)
-    console.log(data[0].category.title)
+
+    // // function BtnClick(){
+    // //     setName(data[0].title)
+    // // }
     
-    return (
-        <>
-            <h1>hello</h1>
-            <button onClick={() => console.log(data)}>click</button>
-        </>
-    )
+    // function Home() {
+    //         return <h1>HOME w/ State</h1>
+    //     }
+    // return (
+    //     <>
+    //         <h1>{name}</h1>
+    //         {/* <button onClick={BtnClick}>click</button> */}
+    //         {page === 'Home' && <Home /> }
+    //         {page === 'Breakfast' && <h1>Breakfast Menu</h1>}
+    //         {page === '' && <h1>Lunch Menu</h1>}
+    //         {page === '' && <h1>Dinner Menu</h1>}
+    //         {page === '' && <h1>Desserts Menu</h1>}
+    //         {page === '' && <h1>Appetizers & Sides</h1>}
+    //         <button onClick={() => setPage('Home')}>CLICK</button>
+    //     </>
+    // )
+    
 }
 export default LoadHome
-
