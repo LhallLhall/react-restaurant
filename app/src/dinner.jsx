@@ -21,9 +21,10 @@ function dinner (props) {
     return (
         <div className='container '>
             <h1 className='text-center p-3 '>Dinner</h1>
-            <div className="row text-center border border-dark border-3 bg-danger">
+            <div className="row text-center border2  bg-danger">
                 {menuItems}
             </div>
+            
         </div>
         )
 }

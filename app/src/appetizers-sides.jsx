@@ -35,9 +35,10 @@ function appSides (props) {
     return (
         <div className='container'>
             <h1 className='text-center p-3 '>Appetizers</h1>
-            <div className="row text-center border border-dark border-3 bg-danger">
+            <div className="row text-center border2 bg-danger">
                 {menuItems}
             </div>
+            
             <h1 className='text-center p-3 '> Sides</h1>
             <div className="row text-center border border-dark border-3 bg-danger">
                 {menuItems2}
