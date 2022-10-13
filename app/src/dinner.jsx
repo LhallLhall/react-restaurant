@@ -1,5 +1,18 @@
-function test (props) {
+function dinner (props) {
     console.log()
-    return <h1>dinner</h1>
+    let menu = (props.data.filter((item) => (item.category.title === 'Dinner')))
+    console.log(menu)
+
+    let menuItems = []
+    
+    for (let i = 0; i < menu.length; i++){
+        menuItems.push(<>
+        <h3>{menu[i].title}</h3>
+        <p>{menu[i].description}</p>
+        <h5>{menu[i].price}</h5> 
+        </>)
+    }
+    return <div>{menuItems}</div>
 }
-export default test
+export default dinner
+
