@@ -30,7 +30,6 @@ export default function getMenuItem(props) {
                 </div>
               </div>
             </div>
-            {/* <div className="card-text d-flex align-items-center justify-content-center flex-shrink-1" >{menu[i].description}</div> */}
           </div>
         </div>
       </div>

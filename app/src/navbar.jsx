@@ -1,5 +1,5 @@
 export default function Buttons(props) {
-  console.log(props.page);
+//   console.log(props.page);
   return (
     <div className="col-6 col-md-2 col-lg-2 p-1 d-flex justify-content-center">
       <button

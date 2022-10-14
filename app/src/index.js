@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './style.css';
-// import App from './app';
+import App from './app';
 // import Breakfast from './breakfast';
 // import Lunch from './lunch';
 // import Dinner from './dinner';
@@ -54,7 +54,7 @@ return (
     <div className='container-fluid'>
       <Port data={data} page={page}/>
     </div>
-    <Footer />
+    
     </div>
       
   </>
