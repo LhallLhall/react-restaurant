@@ -6,7 +6,7 @@ export default function port (props){
     if(props.page !== 'Home'){
       return(
         <>
-        <div className="row pt-3 text-center border2 bg-danger">
+        <div className="row pt-3 text-center border2 classs">
           <MenuItem data={props.data} page={props.page}/>
         </div>
         <div>
@@ -15,12 +15,11 @@ export default function port (props){
         </>
       )
     }
-    // if(props.page === 'Home'){
-    //   return(
-    //     <>
-    //     <Home/>
-
-    //     </>
-    //   )
-    // }
+    if(props.page === 'Home'){
+      return(
+        <>
+        <Home/>
+        </>
+      )
+    }
   }

@@ -34,11 +34,11 @@ function PageLoad (){
         )
   }
   
-  const menu = ['Home', 'Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Appetizer']
+  const menus = ['Home', 'Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Appetizer']
 
   
 
-  function handleClick(text) {
+  function setText(text) {
     setPage(text);
   }
 
@@ -47,8 +47,8 @@ return (
   <div className='container'>
     <Header />
     <div className="row justify-content-center d-flex align-items-center">
-      {menu.map((menuItem) => (
-        <Navbar text={menuItem} handleClick={handleClick} />
+      {menus.map((menuItem) => (
+        <Navbar text={menuItem} handleClick={setText} />
       ))}
     </div>
     <div className='container-fluid'>
