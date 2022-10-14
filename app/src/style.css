@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    /* background-color: #808080; */
+    background-image: url("https://t3.ftcdn.net/jpg/03/32/24/92/360_F_332249282_aicKD4ZlPqVTg2PvbZtDGP5RTzU6cXj3.jpg");
+    /* background-repeat: no-repeat; */
+    /* background-size: 100vh; */
+    /* background-size: 100vw; */
+    background-size: cover;
+    background-position: center;
+}
+
+.classs{
+    background-image: url('https://i.etsystatic.com/21549875/r/il/7ff204/3860715429/il_794xN.3860715429_len9.jpg');
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+.imgFull{
+    background-image: url('https://christy-hill.com/wp-content/uploads/hawaiian-garden-resized.jpg');
+    background-image: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    /* width: 75vw; */
+}
+
+/* .welcome{
+    background-color: rgba(196, 53, 53, 0.5);
+} */
+
+.border2{
+    border: 3px solid #000000;
+    box-shadow: 10px 5px 5px black;
+}
+
+.card{
+    border: 3px solid #000000;
+    box-shadow: 10px 5px 5px black;
+}
