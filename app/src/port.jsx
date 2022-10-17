@@ -14,8 +14,7 @@ export default function port (props){
         </div>
         </>
       )
-    }
-    if(props.page === 'Home'){
+    }else {
       return(
         <>
         <Home/>
